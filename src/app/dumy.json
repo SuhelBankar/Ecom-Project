@@ -1,0 +1,72 @@
+{
+  "seller": [
+    {
+      "Name": "Suhel",
+      "email": "bankarsuhel123@seller.com",
+      "password": "bankar@123",
+      "id": 1
+    },
+    {
+      "Name": "Nayan",
+      "email": "nayan123@seller.com",
+      "password": "nayan@123",
+      "id": 2
+    },
+    {
+      "Name": "Rohan",
+      "email": "rohan@seller.com",
+      "password": "rohan@123",
+      "id": 3
+    }
+  ],
+  "product": [
+    {
+      "name": "oneplus",
+      "price": "100000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "nice one",
+      "image": "https://images.ctfassets.net/wcfotm6rrl7u/ozzwhdkkSr14K1RalbFZ8/a064675a0d3201d67bd59b20cffb5598/nokia-3310_3G-warm_red-front_back-int.png?h=1000&fm=avif",
+      "id": 1
+    },
+    {
+      "name": "oneplus",
+      "price": "20000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "nice one",
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg",
+      "id": 2
+    },
+    {
+      "name": "dettol soap",
+      "price": "5000",
+      "color": "voilet",
+      "category": "essential",
+      "description": "better",
+      "image": "https://www.jiomart.com/images/product/original/491390879/dettol-original-soap-75-g-pack-of-4-product-images-o491390879-p491390879-0-202203150038.jpg",
+      "id": 3
+    }
+  ],
+  "users": [
+    {
+      "name": "Manthan",
+      "email": "Mathan@user.com",
+      "password": "manthan@123",
+      "id": 1
+    },
+    {
+      "name": "Harshal",
+      "email": "harshal@user.com",
+      "password": "harshal@123",
+      "id": 2
+    },
+    {
+      "name": "Vaishnavi",
+      "email": "vaishnavi@user.com",
+      "password": "vaishnavi@123",
+      "id": 3
+    }
+  ],
+  "cart": []
+}

@@ -1,0 +1,84 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav h1 {
+    color: blueviolet;
+    margin: 0;
+    font-size: 40px;
+}
+
+.nav-serach {
+    margin-top: 5px;
+    flex: 1;
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.nav-serach input {
+    flex: 1;
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    height: 35px;
+    border-right: 0px;
+}
+
+.nav-serach button {
+    color: blueviolet;
+    border: 2px solid blueviolet;
+    height: 41px;
+    border-left: 0px;
+}
+
+.nav ul {
+    display: inline-flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav li {
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.nav li a {
+    text-decoration: none;
+    color: blueviolet;
+}
+
+h1 a {
+    color: blueviolet;
+    text-decoration: none;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.suggested-result {
+    position: absolute;
+    display: list-item !important;
+    z-index: 10;
+    background-color: #ddd;
+    width: 300px;
+    top: 40px;
+    border: 1px solid #ddd;
+
+}
+
+.suggested-result li {
+    border: 1px solid #fff;
+    padding: 5px;
+}
+
+.suggested-result li a {
+    cursor: pointer;
+    color: blueviolet;
+}
+
+.nav-barLinks li a {
+    cursor: pointer;
+}

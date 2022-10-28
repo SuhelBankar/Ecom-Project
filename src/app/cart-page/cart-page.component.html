@@ -3,76 +3,16 @@
 
     <div class="row">
         <div class="col-sm-8 details">
-            <ul>
-                <li><img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg" alt=""></li>
+            <ul *ngFor="let cart of cartData">
+                <li><img src="{{cart.image}}" alt=""></li>
                 <li>
-                    <span>Product Name</span>
+                    <span>{{cart.name}}</span>
                 </li>
                 <li>
-                    <span>Price : 100</span>
+                    <span>{{cart.price}}</span>
                 </li>
                 <li>
-                    <span>Quantity : 5</span>
-                </li>
-                <li>
-                    <button class="form-button ">Remove to cart</button>
-                </li>
-            </ul>
-            <ul>
-                <li><img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg" alt=""></li>
-                <li>
-                    <span>Product Name</span>
-                </li>
-                <li>
-                    <span>Price : 100</span>
-                </li>
-                <li>
-                    <span>Quantity : 5</span>
-                </li>
-                <li>
-                    <button class="form-button ">Remove to cart</button>
-                </li>
-            </ul>
-            <ul>
-                <li><img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg" alt=""></li>
-                <li>
-                    <span>Product Name</span>
-                </li>
-                <li>
-                    <span>Price : 100</span>
-                </li>
-                <li>
-                    <span>Quantity : 5</span>
-                </li>
-                <li>
-                    <button class="form-button ">Remove to cart</button>
-                </li>
-            </ul>
-            <ul>
-                <li><img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg" alt=""></li>
-                <li>
-                    <span>Product Name</span>
-                </li>
-                <li>
-                    <span>Price : 100</span>
-                </li>
-                <li>
-                    <span>Quantity : 5</span>
-                </li>
-                <li>
-                    <button class="form-button ">Remove to cart</button>
-                </li>
-            </ul>
-            <ul>
-                <li><img src="https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg" alt=""></li>
-                <li>
-                    <span>Product Name</span>
-                </li>
-                <li>
-                    <span>Price : 100</span>
-                </li>
-                <li>
-                    <span>Quantity : 5</span>
+                    <span>{{cart.quantity}}</span>
                 </li>
                 <li>
                     <button class="form-button ">Remove to cart</button>
@@ -83,22 +23,22 @@
             <h1>Summary</h1>
             <ul>
                 <li>
-                    <span>Amount</span><span>300</span>
+                    <span>Amount</span><span>{{priceSummary.price}}</span>
                 </li>
                 <li>
-                    <span>Tax</span><span>30</span>
+                    <span>Tax</span><span>{{priceSummary.tax}}</span>
                 </li>
                 <li>
-                    <span>Delivery Charge</span><span>20</span>
+                    <span>Delivery Charge</span><span>{{priceSummary.delivery}}</span>
                 </li>
                 <li>
-                    <span>Discount</span><span>50</span>
+                    <span>Discount</span><span>{{priceSummary.discount}}</span>
                 </li>
                 <li>
                     <span>
                         <h4>Total</h4>
                     </span><span>
-                        <h4>300</h4>
+                        <h4>{{priceSummary.total}}</h4>
                     </span>
                 </li>
             </ul>

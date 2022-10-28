@@ -68,5 +68,42 @@
       "id": 3
     }
   ],
-  "cart": []
+  "cart": [
+    {
+      "name": "dettol soap",
+      "price": "5000",
+      "color": "voilet",
+      "category": "essential",
+      "description": "better",
+      "image": "https://www.jiomart.com/images/product/original/491390879/dettol-original-soap-75-g-pack-of-4-product-images-o491390879-p491390879-0-202203150038.jpg",
+      "quantity": 1,
+      "userId": 2,
+      "productId": 3,
+      "id": 3
+    },
+    {
+      "name": "oneplus",
+      "price": "20000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "nice one",
+      "image": "https://fdn2.gsmarena.com/vv/pics/apple/apple-iphone-14-pro-3.jpg",
+      "quantity": 12,
+      "userId": 2,
+      "productId": 2,
+      "id": 4
+    },
+    {
+      "name": "oneplus",
+      "price": "100000",
+      "color": "blue",
+      "category": "mobile",
+      "description": "nice one",
+      "image": "https://images.ctfassets.net/wcfotm6rrl7u/ozzwhdkkSr14K1RalbFZ8/a064675a0d3201d67bd59b20cffb5598/nokia-3310_3G-warm_red-front_back-int.png?h=1000&fm=avif",
+      "quantity": 5,
+      "userId": 2,
+      "productId": 1,
+      "id": 5
+    }
+  ]
 }

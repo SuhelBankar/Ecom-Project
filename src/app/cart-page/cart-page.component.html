@@ -2,11 +2,11 @@
     <h1>Cart Page</h1>
 
     <div class="row">
-        <div class="col-sm-8 details">
+        <!-- <div class="col-sm-8 details">
             <ul *ngFor="let cart of cartData">
                 <li><img src="{{cart.image}}" alt=""></li>
                 <li>
-                    <span>{{cart.name}}</span>
+                    <span>{{cart.title}}</span>
                 </li>
                 <li>
                     <span>{{cart.price}}</span>
@@ -18,10 +18,32 @@
                     <button class="form-button ">Remove to cart</button>
                 </li>
             </ul>
-        </div>
+        </div> -->
+        <table class="table details">
+            <thead>
+                <tr class="p-2 bg-primary border">
+                    <th scope="col">Image</th>
+                    <th scope="col"> Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let cart of cartData" class="shadow-lg p-3 mb-5 bg-body rounded">
+                    <td><img style="width: 60px;" src="{{cart.image}}" alt=""></td>
+                    <td style="width:30px; padding-right: 60px;">{{cart.title}}</td>
+                    <td>{{cart.price}}</td>
+                    <td>{{cart.quantity}}</td>
+                    <td><button type="button" class="btn btn-danger" (click)="removeCart(cart.id)">Reomve to
+                            cart</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
         <div class="col-sm-4 summary">
             <h1>Summary</h1>
-            <ul>
+            <ul class="shadow-lg p-3 mb-5 bg-body rounded">
                 <li>
                     <span>Amount</span><span>{{priceSummary.price}}</span>
                 </li>
@@ -41,7 +63,10 @@
                         <h4>{{priceSummary.total}}</h4>
                     </span>
                 </li>
+                <button type="button" class="btn btn-success check-button" (click)="checkOut()">Check Out</button>
             </ul>
+
+
         </div>
     </div>
 </div>

@@ -11,7 +11,7 @@ export interface Login {
 
 }
 export interface product {
-    name: string;
+    title: string;
     price: number;
     category: string;
     color: string;
@@ -23,7 +23,7 @@ export interface product {
 
 }
 export interface cart {
-    name: string;
+    title: string;
     price: number;
     category: string;
     color: string;
@@ -40,4 +40,13 @@ export interface priceSummary {
     tax: number;
     delivery: number;
     total: number
+}
+export interface order {
+    image: string;
+    email: string;
+    address: string;
+    contact: string;
+    totalprice: number;
+    userId: number;
+    id: number | undefined;
 }

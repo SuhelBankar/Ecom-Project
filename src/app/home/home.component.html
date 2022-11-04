@@ -6,22 +6,21 @@
       </a>
     </div>
     <div class="carousel-caption">
-      <h3>{{item.name}}</h3>
-      <p>{{item.description}}</p>
+      <h3>{{item.title}}</h3>
     </div>
 
   </ng-template>
 </ngb-carousel>
 <div class="product-list-wrapper">
   <h1 class="product-list-wrapper">Trendy Product</h1>
-  <div class="row">
-    <div class="col-sm-3" *ngFor="let items of trendyProduct">
+  <div class="row" style="padding-right: 150px;">
+    <div class="col-sm-3 shadow-lg p-3 mb-5 bg-body rounded" *ngFor="let items of trendyProduct">
       <div class="product-item">
         <img src="{{items.image}}" alt="">
       </div>
       <div class="product-details">
         <h6 class="name-head">
-          {{items.name}}
+          {{items.title}}
         </h6>
         <div class="product-price">
           <h6>{{items.price}}</h6>

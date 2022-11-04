@@ -18,7 +18,8 @@ import { SearchComponentComponent } from './search-component/search-component.co
 import { ProductDetailsComponent } from './product-details/product-details.component';
 import { UserAuthComponent } from './user-auth/user-auth.component';
 import { CartPageComponent } from './cart-page/cart-page.component';
-import { CompComponent } from './comp/comp.component';
+import { CartCheckoutComponent } from './cart-checkout/cart-checkout.component';
+import { MyOrdersComponent } from './my-orders/my-orders.component';
 
 
 
@@ -39,20 +40,21 @@ import { CompComponent } from './comp/comp.component';
     ProductDetailsComponent,
     UserAuthComponent,
     CartPageComponent,
-    CompComponent,
+    CartCheckoutComponent,
+    MyOrdersComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule , 
-    FormsModule , 
-    HttpClientModule, 
-    FontAwesomeModule, 
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    FontAwesomeModule,
     NgbModule,
     CarouselModule
-    
-    
-    
+
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

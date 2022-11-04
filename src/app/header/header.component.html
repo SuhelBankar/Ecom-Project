@@ -1,12 +1,12 @@
 <nav class="nav">
     <h1><a routerLink="/">E-Com</a></h1>
-    <div *ngIf="menuType ==='default'" class="nav-serach">
+    <div *ngIf="menuType ==='default'||menuType ==='user'" class="nav-serach">
         <input #searchInput type="text" (keyup)="searchProduct($event)" (blur)="searchHide()"
             placeholder="search for product">
-        <button (click)="submitSearch(searchInput.value)">Search</button>
+        <button style="height: 35px;" (click)="submitSearch(searchInput.value)">Search</button>
         <ul class="suggested-result" *ngIf="searchResult">
             <li *ngFor="let item of searchResult">
-                <a (mousedown)="redirctToDetails(item.id)">{{item.name}}</a>
+                <a (mousedown)="redirctToDetails(item.id)">{{item.title}}</a>
             </li>
         </ul>
     </div>
@@ -23,7 +23,8 @@
             <li><a routerLink="/seller-auth">Selller</a></li>
             <li><a routerLink="/seller-auth">{{userName | titlecase}}</a></li>
             <li><a (click)="userlogout()">Logout</a></li>
-            <li><a routerLink="/cart-Page">Card({{cartItem}})</a></li>
+            <li><a routerLink="/my-orders">My Order</a></li>
+            <li><a [routerLink]="cartItem>0?'/cart-Page':null">Card({{cartItem}})</a></li>
         </ul>
 
         <ul *ngSwitchCase="'seller'">

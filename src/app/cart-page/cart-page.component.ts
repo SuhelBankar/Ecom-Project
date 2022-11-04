@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { cart, priceSummary } from '../data-type';
 import { ProductService } from '../services/product.service';
 
@@ -16,9 +17,21 @@ export class CartPageComponent implements OnInit {
     delivery: 0,
     total: 0
   }
-  constructor(private product: ProductService) { }
+  constructor(private product: ProductService, private router: Router) { }
 
   ngOnInit(): void {
+    this.loadDetails();
+
+  }
+  checkOut() {
+    this.router.navigate(['/checkOut'])
+  }
+  removeCart(cartId: number | undefined) {
+    cartId && this.cartData && this.product.removeToCart(cartId).subscribe((result) => {
+      this.loadDetails();
+    })
+  }
+  loadDetails() {
     this.product.currentCart().subscribe((result) => {
       // console.log(result)
       this.cartData = result;
@@ -36,7 +49,10 @@ export class CartPageComponent implements OnInit {
       this.priceSummary.delivery = 100;
       this.priceSummary.total = price + (price / 10) + 100 - (price / 10);
       console.log(this.priceSummary)
+
+      if (this.cartData.length === 0) {
+        this.router.navigate(['/'])
+      }
     });
   }
-
 }
